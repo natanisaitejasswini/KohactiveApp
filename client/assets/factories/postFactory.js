@@ -46,5 +46,13 @@ app.factory('postFactory', function($http,$location){
     })
   }
 
+  // Destroy Question
+  factory.destroy = function(id,callback){
+    $http.delete("/post/"+ id).success(function(data){
+      // console.log(data);
+      callback()
+    })
+  }
+
   return factory
 })
