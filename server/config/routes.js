@@ -1,5 +1,6 @@
 console.log('routes');
 var users = require('../controllers/users');
+var post = require('../controllers/posts');
 
 module.exports = function(app){
 	// User Routes
@@ -7,4 +8,8 @@ module.exports = function(app){
 		users.login(request,response);
 	}) 
 	app.get('/users',users.index)
+
+	//Post Routes
+	app.get('/posts', post.index)
+	app.post('/post', post.create)
 }
