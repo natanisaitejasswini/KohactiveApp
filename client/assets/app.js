@@ -14,6 +14,12 @@ app.config(function ($routeProvider) {
   .when('/post/:id',{
     templateUrl: 'partials/specific_post.html'
   })
+  .when('/approveposts',{
+    templateUrl: 'partials/approveposts.html'
+  })
+  .when('/allposts',{
+    templateUrl: 'partials/allposts.html'
+  })
   .otherwise({
     redirectTo: '/index'
   });

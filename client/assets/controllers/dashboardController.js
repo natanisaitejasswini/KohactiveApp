@@ -33,6 +33,17 @@ app.controller('dashboardController', function(usersFactory, postFactory, $locat
   	}
   	index();
 
+  	//Admin going to approveposts page
+  	self.approveposts = function(){
+		// console.log("entered")
+		$location.url('/approveposts')
+	}
+
+	//Going to allposts page
+	self.allposts = function(){
+		$location.url('/allposts')
+	}
+
   	// Logout function
 	self.logout = function(){
 	    usersFactory.logout(function(data){
