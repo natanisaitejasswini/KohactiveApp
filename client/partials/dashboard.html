@@ -46,7 +46,7 @@
         <th>Published At</th>
         <th>Actions</th>
       </tr>
-        <tr ng-repeat="post in Dc.posts | filter:post_filter">
+        <tr ng-repeat="post in Dc.posts | filter:post_filter | orderBy:'-updatedAt'| limitTo:10" ng-if="post.status == 'Published'">
           <td ng-bind='post.text'></td>
           <td>{{post.updatedAt | date: 'yyyy-MM-dd HH:mm'}}</td>
           <td>

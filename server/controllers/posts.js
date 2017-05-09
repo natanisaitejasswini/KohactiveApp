@@ -29,5 +29,32 @@ module.exports = (function(){
 			})
 		},
 
+		//Publishing post by admin
+		publish_post: function(request, response){
+	      // console.log('.........Publishing.....', request.body);
+	      Post.findOne({_id:request.body.post}, function(err,results){
+	      	console.log(results);
+	        results.status = request.body.status;
+	        console.log(results.status);
+	        results.save(function(err){
+	          if(err){
+	            console.log("something went wrong");
+	          } else {
+	            response.json(results)
+	          }
+	        });
+	        console.log('Finall posts will be with Published by admin', results)
+	      })
+    	},
+
+    	// Destroy the post
+    	destroy: function(request, response){
+	      Post.remove({_id:request.params.id}, function(err,post){
+	      	//Whatever id we are passing through routes it deletes that psots
+	        if(err) request.json(err)
+	        else response.json({'status':true})
+	      })
+    	},
+
 		}
 })()

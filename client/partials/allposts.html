@@ -14,9 +14,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href ng-click='Dc.createpost()'>Make a Post</a></li>
         <li><a ng-if="Dc.user_session.role === 'Admin'" href ng-click='Dc.approveposts()'>Approve Posts</a></li>
         <li><a href ng-click='Dc.allposts()'>All Posts</a></li>
+        <li><a href ng-click='Dc.createpost()'>Make a new Post</a></li>s
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">

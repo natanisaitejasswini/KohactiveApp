@@ -13,4 +13,6 @@ module.exports = function(app){
 	app.get('/posts', post.index)
 	app.post('/post', post.create)
 	app.get('/post/:id', post.show) //showing post on new page
+	app.post('/publish',post.publish_post)
+	app.delete('/post/:id',post.destroy)
 }

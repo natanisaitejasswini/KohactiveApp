@@ -44,6 +44,16 @@ app.controller('dashboardController', function(usersFactory, postFactory, $locat
 		$location.url('/allposts')
 	}
 
+
+	// publishing the question from dashboard.html
+	self.publish = function(info){//called from page
+	    id = info
+	    var new_publish = {post:info, status: "Published"}
+    	postFactory.create_publish(new_publish,function(response_from_server){
+	      	index(); //to refresh approveposts page on approving one
+	        $location.url('/approveposts');
+    	})
+  	}
   	// Logout function
 	self.logout = function(){
 	    usersFactory.logout(function(data){

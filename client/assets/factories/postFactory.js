@@ -33,5 +33,18 @@ app.factory('postFactory', function($http,$location){
     })
   }
 
+  // Publishing Post by admin with status Published
+  factory.create_publish = function(data, callback){
+    $http.post('/publish', data).success(function(response_from_server){
+      // console.log(response_from_server,'on server side')
+      if(!data.status){
+        callback(response_from_server)
+      }
+      else {
+        callback(response_from_server)
+      }
+    })
+  }
+
   return factory
 })

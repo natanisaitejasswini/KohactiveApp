@@ -14,8 +14,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href ng-click='Dc.createpost()'>Make a Post</a></li>
         <li><a href ng-click='Dc.allposts()'>All Posts</a></li>
+        <li><a href ng-click='Dc.createpost()'>Make a new Post</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -50,7 +50,7 @@
   				<td>{{post.updatedAt | date: 'yyyy-MM-dd HH:mm'}}</td>
   				<td>
   					<a href ng-click='Dc.show(post._id)' class="btn great1">Show</a>
-  					<a ng-if="Dc.user_session.role === 'Admin' && post.status != 'Published'" href ng-click='Dc.answer(post._id)' class="btn great1">Publish</a>
+  					<a ng-if="Dc.user_session.role === 'Admin' && post.status != 'Published'" href ng-click='Dc.publish(post._id)' class="btn great1">Publish</a>
   					<a ng-if="post.name == Dc.user_session.name || Dc.user_session.role === 'Admin'" href ng-click='Dc.destroy(post._id)' class="btn great1">Delete</a>
   				</td>
 		</tr>
