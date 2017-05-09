@@ -16,7 +16,7 @@ module.exports = (function(){
 			post.save(function(err){
 				if(err) response.json(err)
 				else{
-					console.log('DB Push')
+					// console.log('DB Push')
 					response.json({'status': true})
 				} 		
 			})
@@ -43,7 +43,7 @@ module.exports = (function(){
 	            response.json(results)
 	          }
 	        });
-	        console.log('Finall posts will be with Published by admin', results)
+	        // console.log('Finall posts will be with Published by admin', results)
 	      })
     	},
 
