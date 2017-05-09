@@ -51,5 +51,10 @@ _KohactiveApp_  is a full-stack application performing Creating new posts and Ap
    - Posts can be approved by only Admin (Status: Published)
    
  * All Published Posts
-  - All Posts can be Viewed
+   - All Posts can be Viewed
+   
+  Kohactive_App Project Deployed onto  AWS (Running Live)
+ ----------------------------------------------------
+  [KohactiveApp](http://34.208.111.115/#/index)
+
   
