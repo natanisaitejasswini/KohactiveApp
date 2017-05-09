@@ -19,6 +19,14 @@ app.controller('postController', function(postFactory, usersFactory ,$location, 
   }
   index();
 
+  //Refresh of specific_question page
+  if($routeParams){
+    postFactory.show($routeParams.id,function(data){
+      // console.log('data is is ', data)
+      self.current_post = data
+    })
+  }
+
   // creating new post
   self.create = function(){
     if(!self.post) return;

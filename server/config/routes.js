@@ -12,4 +12,5 @@ module.exports = function(app){
 	//Post Routes
 	app.get('/posts', post.index)
 	app.post('/post', post.create)
+	app.get('/post/:id', post.show) //showing post on new page
 }

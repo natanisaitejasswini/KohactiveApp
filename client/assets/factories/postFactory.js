@@ -24,5 +24,14 @@ app.factory('postFactory', function($http,$location){
     })
   }
 
+  // Showing Details of POST.....
+  factory.show = function(id,callback){
+    $http.get("/post/"+ id).success(function(data){
+      current_post = data
+      // console.log('current_question',current_question);
+      callback(data)
+    })
+  }
+
   return factory
 })

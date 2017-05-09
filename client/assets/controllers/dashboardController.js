@@ -15,6 +15,16 @@ app.controller('dashboardController', function(usersFactory, postFactory, $locat
 		$location.url('/new_post')
 	}
 
+	// Showing Post and redirecting to specific Post page
+	self.show = function(info){
+		id = info
+		// console.log(id);
+		postFactory.show(id,function(id){
+			self.current_post = info
+			$location.url('/post/'+self.current_post)
+		})
+	}
+
 	// Showing all posts on dashpage
 	var index = function(){
 	   	postFactory.index(function(data){
@@ -29,6 +39,11 @@ app.controller('dashboardController', function(usersFactory, postFactory, $locat
 	     $cookies.remove('user')
 	      $location.url('/index');
 	    })
+  	}
+
+  	// Destroy Post
+  	self.destroy = function(data){
+      postFactory.destroy(data,index)
   	}
 
 })

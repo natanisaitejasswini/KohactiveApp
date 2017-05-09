@@ -21,6 +21,13 @@ module.exports = (function(){
 				} 		
 			})
 		},
+		//show post on new page
+		show: function(request,response){
+			Post.findOne({_id: request.params.id}, function(err, results){
+				// console.log('Show Post Found')
+				response.json(results)
+			})
+		},
 
 		}
 })()

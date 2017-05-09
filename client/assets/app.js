@@ -11,6 +11,9 @@ app.config(function ($routeProvider) {
   .when('/new_post',{
     templateUrl: 'partials/new_post.html'
   })
+  .when('/post/:id',{
+    templateUrl: 'partials/specific_post.html'
+  })
   .otherwise({
     redirectTo: '/index'
   });
