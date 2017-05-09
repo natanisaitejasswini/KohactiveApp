@@ -1,6 +1,6 @@
 # KohactiveApp
 
-_KohactiveApp_  is a full-stack application performing Posting and Publishing posts by Admin
+_KohactiveApp_  is a full-stack application performing Creating new posts and Approving those by Admin
 
  Kohactive App Technology
  ---------------------------
@@ -22,7 +22,7 @@ _KohactiveApp_  is a full-stack application performing Posting and Publishing po
   
   #### Continue with installation
   * Install latest version of [Node.js](https://nodejs.org/en/download/current/)
-  * Clone or download repo [KhocativeApp](https://github.com/natanisaitejasswini/KohactiveApp)
+  * Clone or download repo [KhoactiveApp](https://github.com/natanisaitejasswini/KohactiveApp)
   * Open Node.JS cmd prompt and navigate to folder named "KhoactiveApp", you should see all the folders but most importantly you should be able to see the server.js file, if you see it you're in the right place
   * To connect to the MongoDB server follow the following instructions for Mac
   * All npm commands should be run from the Node.js cmd prompt
